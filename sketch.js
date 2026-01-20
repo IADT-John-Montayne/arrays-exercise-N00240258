@@ -44,6 +44,40 @@ for(let name in names){
 	console.log(name)
 }
 
+/////////////////////////////////////////////////////
+
+// Exercise: Fruit Basket Manager Tasks
+// Read from array
+let basket = ["apple", "banana", "orange", "pear"];
+
+console.log(basket[0]);
+console.log(basket[basket.length - 1]);
+
+// Modify the basket
+let bananaIndex = basket.indexOf("banana");
+basket.splice(bananaIndex, bananaIndex, "kiwi");
+
+basket.pop();
+basket.unshift("mango");
+
+for(let i = 0; i < basket.length; i++){
+	console.log(`Fruit ${i+1}: ${basket[i]}`)
+}
+
+// Search for a fruit
+let orangeIndex = basket.indexOf("orange")
+if( orangeIndex != -1){
+	console.log(`Orange found at index ${orangeIndex}` )
+} else {
+	console.log("Orange not found")
+}
+
+// Copy part of the basket
+let basketMiddle = Math.floor(basket.length/2)
+let citrus = basket.slice((basketMiddle - 1),(basketMiddle + 1))
+console.log(citrus)
+console.log(basket)
+
 function setup() {
 	createCanvas(500, 500);
 	background(55);
