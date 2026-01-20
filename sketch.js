@@ -6,4 +6,5 @@ function setup() {
 
 function draw() {
 	rect(250, 250, 100, 100);
+	// this is a test
 }
